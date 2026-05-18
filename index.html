@@ -33,7 +33,6 @@
     overflow-x: hidden;
   }
 
-  /* DOT GRID BACKGROUND */
   body::before {
     content: '';
     position: fixed;
@@ -44,7 +43,6 @@
     z-index: 0;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -83,10 +81,8 @@
 
   .nav-links a:hover { color: var(--accent); }
 
-  /* SECTIONS */
   section { position: relative; z-index: 1; }
 
-  /* HERO */
   #hero {
     min-height: 100vh;
     display: flex;
@@ -193,7 +189,6 @@
     letter-spacing: 0.04em;
   }
 
-  /* DIVIDER */
   .section-divider {
     max-width: 1100px;
     margin: 0 auto;
@@ -201,7 +196,6 @@
     border-top: 1px solid var(--border);
   }
 
-  /* SECTION HEADERS */
   .section-header {
     display: flex;
     align-items: center;
@@ -229,7 +223,6 @@
     background: var(--border);
   }
 
-  /* ABOUT */
   #about {
     max-width: 1100px;
     margin: 0 auto;
@@ -282,7 +275,6 @@
     color: var(--text);
   }
 
-  /* SKILLS */
   #skills {
     background: var(--bg2);
     padding: 6rem 0;
@@ -344,7 +336,6 @@
     background: rgba(0, 200, 150, 0.07);
   }
 
-  /* EXPERIENCE */
   #experience {
     max-width: 1100px;
     margin: 0 auto;
@@ -444,7 +435,6 @@
     font-size: 0.8rem;
   }
 
-  /* PROJECTS */
   #projects {
     background: var(--bg2);
     border-top: 1px solid var(--border);
@@ -509,7 +499,6 @@
     gap: 0.4rem;
   }
 
-  /* CONTACT */
   #contact {
     max-width: 1100px;
     margin: 0 auto;
@@ -567,7 +556,6 @@
     z-index: 1;
   }
 
-  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -598,7 +586,6 @@
   .delay-4 { animation-delay: 0.5s; }
   .delay-5 { animation-delay: 0.65s; }
 
-  /* RESPONSIVE */
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { gap: 1.2rem; }
@@ -651,12 +638,12 @@
       <div class="metric-label">Engineering Internships</div>
     </div>
     <div>
-      <div class="metric-val">C++ / Python</div>
+      <div class="metric-val" style="font-size:1.1rem; line-height:1.6;">Python · C++<br>PyTorch · NumPy</div>
       <div class="metric-label">Primary Stack</div>
     </div>
     <div>
-      <div class="metric-val">OpenCV · YOLO</div>
-      <div class="metric-label">Core Tooling</div>
+      <div class="metric-val" style="font-size:1.1rem; line-height:1.6;">OpenCV · YOLOv8<br>TensorRT · ONNX</div>
+      <div class="metric-label">Core CV Tooling</div>
     </div>
   </div>
 </section>
@@ -671,7 +658,7 @@
   <div class="about-grid">
     <div class="about-text">
       <p>
-        I'm a final-year <strong>Electronics and Communication Engineering</strong> student at
+        I hold a degree in <strong>Electronics and Communication Engineering</strong> from
         Manipal Institute of Technology Bengaluru, specialising in computer vision and real-time
         image processing systems.
       </p>
@@ -697,7 +684,7 @@
       </div>
       <div class="detail-row">
         <span class="detail-key">Degree</span>
-        <span class="detail-val">B.Tech ECE — MIT Bengaluru (Graduating May 2026)</span>
+        <span class="detail-val">B.Tech ECE — MIT Bengaluru</span>
       </div>
       <div class="detail-row">
         <span class="detail-key">Status</span>
@@ -724,72 +711,97 @@
       <div class="section-line"></div>
     </div>
     <div class="skills-grid">
+
+      <!-- CV Core -->
       <div class="skill-card">
         <div class="skill-card-title">Computer Vision</div>
         <div class="skill-tags">
-          <span class="tag accent">OpenCV</span>
-          <span class="tag accent">YOLO</span>
-          <span class="tag accent">Camera Calibration</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">YOLO</span>
+          <span class="tag">Camera Calibration</span>
+          <span class="tag">Object Detection</span>
           <span class="tag">Contour Analysis</span>
           <span class="tag">Edge Detection</span>
           <span class="tag">Perspective Correction</span>
-          <span class="tag">Object Detection</span>
           <span class="tag">Distance Estimation</span>
+          <span class="tag">Image Segmentation</span>
+          <span class="tag">Feature Extraction</span>
         </div>
       </div>
+
+      <!-- Deep Learning & ML -->
+      <div class="skill-card">
+        <div class="skill-card-title">Deep Learning & ML</div>
+        <div class="skill-tags">
+          <span class="tag">PyTorch</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">CNN Architectures</span>
+          <span class="tag">Transfer Learning</span>
+          <span class="tag">Model Fine-Tuning</span>
+          <span class="tag">Data Augmentation</span>
+          <span class="tag">mAP / Precision / Recall</span>
+          <span class="tag">Inference Latency</span>
+        </div>
+      </div>
+
+      <!-- Programming — CV focused -->
       <div class="skill-card">
         <div class="skill-card-title">Programming</div>
         <div class="skill-tags">
-          <span class="tag accent">C++</span>
-          <span class="tag accent">Python</span>
-          <span class="tag accent">C</span>
-          <span class="tag">Verilog</span>
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">OpenCV-Python</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">C</span>
           <span class="tag">MATLAB</span>
+        </div>
+      </div>
+
+      <!-- CV Tools & Platforms -->
+      <div class="skill-card">
+        <div class="skill-card-title">CV Tools & Platforms</div>
+        <div class="skill-tags">
+          <span class="tag">Roboflow</span>
+          <span class="tag">LabelImg</span>
+          <span class="tag">CVAT</span>
+          <span class="tag">TensorRT</span>
+          <span class="tag">ONNX</span>
+          <span class="tag">Jupyter Notebook</span>
+          <span class="tag">Git</span>
+          <span class="tag">VS Code</span>
+        </div>
+      </div>
+
+      <!-- Embedded & Edge Vision -->
+      <div class="skill-card">
+        <div class="skill-card-title">Embedded & Edge Vision</div>
+        <div class="skill-tags">
+          <span class="tag">ARM Microprocessors</span>
+          <span class="tag">ESP32</span>
+          <span class="tag">Real-Time Systems</span>
+          <span class="tag">Edge Deployment</span>
+          <span class="tag">Model Quantization</span>
+          <span class="tag">Low-Latency Pipelines</span>
           <span class="tag">Embedded C</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="skill-card-title">Embedded & Hardware</div>
-        <div class="skill-tags">
-          <span class="tag accent">ARM Microprocessors</span>
-          <span class="tag">ESP32</span>
-          <span class="tag">Arduino</span>
-          <span class="tag">Real-Time Systems</span>
-          <span class="tag">RTL Design</span>
-          <span class="tag">AMBA / AHB-APB</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card-title">Tools & Platforms</div>
-        <div class="skill-tags">
-          <span class="tag">Vivado</span>
-          <span class="tag">KEIL</span>
-          <span class="tag">OrCAD</span>
-          <span class="tag">PSpice</span>
-          <span class="tag">MATLAB</span>
-          <span class="tag">Git</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card-title">Electronics</div>
-        <div class="skill-tags">
-          <span class="tag">Digital Circuit Design</span>
-          <span class="tag">Analog Design</span>
-          <span class="tag">PCB Integration</span>
-          <span class="tag">Signal Integrity</span>
-          <span class="tag">Low Power Design</span>
-        </div>
-      </div>
+
+      <!-- Domain Knowledge -->
       <div class="skill-card">
         <div class="skill-card-title">Domain Knowledge</div>
         <div class="skill-tags">
-          <span class="tag accent">Image Processing</span>
-          <span class="tag">SoC Integration</span>
+          <span class="tag">Image Processing</span>
           <span class="tag">Sensor Fusion</span>
-          <span class="tag">mAP / Precision / Recall</span>
-          <span class="tag">Inference Latency Analysis</span>
+          <span class="tag">ADAS Perception</span>
+          <span class="tag">Industrial Vision</span>
+          <span class="tag">Safety-Critical Systems</span>
+          <span class="tag">SoC Integration</span>
+          <span class="tag">Signal Integrity</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -862,6 +874,8 @@
       <div class="section-line"></div>
     </div>
     <div class="projects-grid">
+
+      <!-- Project 1 -->
       <div class="project-card">
         <div class="project-icon">Computer Vision · Deep Learning</div>
         <div class="project-name">Real-Time Object Detection & Distance Estimation</div>
@@ -879,6 +893,7 @@
         </div>
       </div>
 
+      <!-- Project 2 -->
       <div class="project-card">
         <div class="project-icon">Hardware · RTL Design</div>
         <div class="project-name">AHB-to-APB Bridge Design</div>
@@ -895,30 +910,28 @@
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-icon">Robotics · Embedded</div>
-        <div class="project-name">Autonomous Robot — PCB & Sensor Integration</div>
+      <!-- Project 3 — SmartSite Hazard Safety -->
+      <div class="project-card" style="border-color: rgba(0,200,150,0.25);">
+        <div class="project-icon">Computer Vision · Safety AI</div>
+        <div class="project-name">SmartSite Hazard Safety Detection System</div>
         <div class="project-desc">
-          Led PCB design and electronics integration for a competition-grade autonomous robot.
-          Handled sensor fusion, power management, and real-time control systems for
-          reliable deployment in dynamic environments.
+          Building a real-time CV pipeline to detect safety violations on construction sites —
+          identifying missing PPE (helmets, vests), restricted zone intrusions, and unsafe
+          proximity events. Leverages YOLOv8 with a custom-trained dataset and alert triggering
+          for live monitoring deployments.
         </div>
         <div class="project-stack">
-          <span class="tag accent">ARM</span>
-          <span class="tag accent">ESP32</span>
-          <span class="tag">PCB Design</span>
-          <span class="tag">Real-Time Systems</span>
-          <span class="tag">Sensor Fusion</span>
+          <span class="tag accent">Python</span>
+          <span class="tag accent">YOLOv8</span>
+          <span class="tag accent">OpenCV</span>
+          <span class="tag">Roboflow</span>
+          <span class="tag">PPE Detection</span>
+          <span class="tag">Real-Time Alerts</span>
         </div>
       </div>
 
-      <div class="project-card" style="border-style: dashed; opacity: 0.6; justify-content: center; align-items: center; text-align: center; min-height: 200px;">
-        <div class="project-icon">Coming Soon</div>
-        <div class="project-name" style="margin-top: 0.5rem;">Edge CV Deployment Project</div>
-        <div class="project-desc" style="margin-top: 0.5rem;">
-          Currently building — model quantization & TensorRT deployment on embedded hardware.
-        </div>
-      </div>
+
+
     </div>
   </div>
 </section>
