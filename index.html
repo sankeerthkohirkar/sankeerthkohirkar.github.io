@@ -275,6 +275,39 @@
     color: var(--text);
   }
 
+  #identity { max-width:1100px; margin:0 auto; padding:6rem 4rem; }
+  .identity-intro { color:#a0adb8; font-size:1rem; max-width:680px; margin-bottom:2.5rem; line-height:1.85; }
+  .identity-intro strong { color:var(--text); font-weight:500; }
+  .identity-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+  .identity-card { border:1px solid var(--border); border-radius:10px; padding:1.8rem; background:var(--card); transition:border-color 0.2s; position:relative; overflow:hidden; }
+  .identity-card::after { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--accent); opacity:0; transition:opacity 0.2s; }
+  .identity-card:hover { border-color:rgba(0,200,150,0.3); }
+  .identity-card:hover::after { opacity:1; }
+  .identity-card h3 { font-family:var(--mono); font-size:0.78rem; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.8rem; }
+  .identity-card p { font-size:0.9rem; color:#7a8898; line-height:1.75; }
+
+  #whyme { background:var(--bg2); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:6rem 0; }
+  .whyme-inner { max-width:1100px; margin:0 auto; padding:0 4rem; }
+  .whyme-intro { color:#a0adb8; font-size:1rem; max-width:640px; margin-bottom:2.5rem; line-height:1.85; }
+  .whyme-row { display:grid; grid-template-columns:48px 220px 1fr 150px; gap:2rem; align-items:start; padding:1.8rem 0; border-bottom:1px solid var(--border); transition:background 0.2s; border-radius:4px; }
+  .whyme-row:last-child { border-bottom:none; }
+  .whyme-row:hover { background:rgba(255,255,255,0.015); padding-left:0.5rem; }
+  .whyme-num { font-family:var(--mono); font-size:0.7rem; color:var(--muted); letter-spacing:0.1em; padding-top:0.15rem; }
+  .whyme-title { font-family:var(--mono); font-size:0.88rem; font-weight:500; color:var(--text); line-height:1.4; padding-top:0.1rem; }
+  .whyme-desc { font-size:0.88rem; color:#7a8898; line-height:1.75; }
+  .whyme-badge { text-align:right; }
+  .verified-tag { display:inline-block; font-family:var(--mono); font-size:0.62rem; color:var(--accent); background:rgba(0,200,150,0.08); border:1px solid rgba(0,200,150,0.25); padding:0.2rem 0.6rem; border-radius:4px; letter-spacing:0.04em; white-space:nowrap; }
+  .exploring-card { border:1px dashed rgba(0,148,255,0.35) !important; background:rgba(0,148,255,0.04) !important; }
+  .exploring-card .skill-card-title { color:var(--accent2) !important; }
+  .exploring-card .tag { border-color:rgba(0,148,255,0.25); color:rgba(0,148,255,0.8); background:rgba(0,148,255,0.05); }
+  .project-metric { font-family:var(--mono); font-size:0.8rem; color:var(--accent); font-weight:500; }
+  @media(max-width:768px) {
+    #identity, .whyme-inner { padding-left:1.5rem; padding-right:1.5rem; }
+    .identity-grid { grid-template-columns:1fr; }
+    .whyme-row { grid-template-columns:1fr; gap:0.5rem; }
+    .whyme-num, .whyme-badge { display:none; }
+  }
+
   #skills {
     background: var(--bg2);
     padding: 6rem 0;
@@ -607,6 +640,8 @@
   <span class="nav-logo">SK.dev</span>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#identity">Engineering</a></li>
+    <li><a href="#whyme">Why Me</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -702,11 +737,89 @@
   </div>
 </section>
 
+<!-- ENGINEERING IDENTITY -->
+<section id="identity">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2>Engineering Identity</h2>
+    <div class="section-line"></div>
+  </div>
+  <p class="identity-intro">My path into computer vision came through electronics engineering — not a software bootcamp. That means the work I do sits at the intersection of hardware constraints and visual intelligence. It's a combination that shapes how I approach problems, and one that's <strong>uncommon at this stage of a career.</strong></p>
+  <div class="identity-grid">
+    <div class="identity-card">
+      <h3>Hardware Context</h3>
+      <p>An ECE background means deployment constraints — memory bandwidth, real-time latency, edge hardware — are part of how I frame a problem from the start. It changes what questions I ask before writing any code.</p>
+    </div>
+    <div class="identity-card">
+      <h3>Production Exposure at Panasonic</h3>
+      <p>Working on a live dimension measurement system has meant dealing with the practical side of CV — lighting variation, calibration drift, deployment consistency. Lab accuracy and field reliability are different things.</p>
+    </div>
+    <div class="identity-card">
+      <h3>C++ and Python as Primary Languages</h3>
+      <p>Working in both C++ and Python reflects how CV development actually works — prototyping and training in Python, performance-critical deployment in C++. Having hands-on experience in both means less friction moving between the two in a production environment.</p>
+    </div>
+    <div class="identity-card">
+      <h3>Pipeline Familiarity</h3>
+      <p>Having built end-to-end — from preprocessing and model inference through distance estimation and metric evaluation — means I understand what each stage contributes and where things can go wrong. That context is useful in practice.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section id="whyme">
+  <div class="whyme-inner">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Why Me</h2>
+      <div class="section-line"></div>
+    </div>
+    <p class="whyme-intro">A few things that distinguish my profile at this stage — not as superlatives, but as context for what I bring to a team.</p>
+    <div class="whyme-list">
+      <div class="whyme-row">
+        <span class="whyme-num">01</span>
+        <div class="whyme-title">C++ and Python, not just Python</div>
+        <div class="whyme-desc">Many CV candidates at this level work exclusively in Python. Having practical experience in both C++ and Python — with OpenCV across both — is relevant for roles where deployment performance matters and the full stack spans both languages.</div>
+        <div class="whyme-badge"><span class="verified-tag">Verified @ Panasonic</span></div>
+      </div>
+      <div class="whyme-row">
+        <span class="whyme-num">02</span>
+        <div class="whyme-title">Exposure to both hardware and software</div>
+        <div class="whyme-desc">SoC bridge design at Maven Silicon, PCB integration for robotics, ARM microcontrollers — alongside CV work. It's not deep expertise in either direction, but the overlap informs how I think about systems where software runs close to hardware.</div>
+        <div class="whyme-badge"><span class="verified-tag">Verified @ Maven Silicon</span></div>
+      </div>
+      <div class="whyme-row">
+        <span class="whyme-num">03</span>
+        <div class="whyme-title">Some real-world deployment experience</div>
+        <div class="whyme-desc">Robustness testing, lighting variation, calibration accuracy — these came up during the Panasonic work. It's a limited but concrete introduction to the difference between a working prototype and something that holds up in use.</div>
+        <div class="whyme-badge"><span class="verified-tag">Production Deployed</span></div>
+      </div>
+      <div class="whyme-row">
+        <span class="whyme-num">04</span>
+        <div class="whyme-title">Built a pipeline, not just a model</div>
+        <div class="whyme-desc">The YOLO project covered the full scope — data preparation, model selection, inference, distance estimation, and evaluation. Working across all of it gives a clearer picture of where complexity actually lives in a CV system.</div>
+        <div class="whyme-badge"><span class="verified-tag">See Projects</span></div>
+      </div>
+      <div class="whyme-row">
+        <span class="whyme-num">05</span>
+        <div class="whyme-title">Team experience in a technical context</div>
+        <div class="whyme-desc">Leading the electronics team at the Robotics Club involved coordinating under time pressure and making decisions with incomplete information — useful context for working in a team on applied engineering problems.</div>
+        <div class="whyme-badge"><span class="verified-tag">MIT Bengaluru</span></div>
+      </div>
+      <div class="whyme-row">
+        <span class="whyme-num">06</span>
+        <div class="whyme-title">Two internships before graduating</div>
+        <div class="whyme-desc">VLSI at Maven Silicon and CV at Panasonic covered different domains within the same stack. The breadth is modest, but having worked in both hardware design and vision systems provides more reference points than a single placement typically would.</div>
+        <div class="whyme-badge"><span class="verified-tag">Both Verified</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SKILLS -->
 <section id="skills">
   <div class="skills-inner">
     <div class="section-header">
-      <span class="section-num">02</span>
+      <span class="section-num">04</span>
       <h2>Skills</h2>
       <div class="section-line"></div>
     </div>
@@ -802,6 +915,22 @@
         </div>
       </div>
 
+      <!-- Currently Exploring -->
+      <div class="skill-card exploring-card">
+        <div class="skill-card-title">Currently Exploring</div>
+        <div class="skill-tags">
+          <span class="tag">TensorRT</span>
+          <span class="tag">CUDA</span>
+          <span class="tag">Model Quantisation</span>
+          <span class="tag">Model Pruning</span>
+          <span class="tag">ONNX Runtime</span>
+          <span class="tag">Depth Estimation</span>
+          <span class="tag">ViT / DETR</span>
+          <span class="tag">Semantic Segmentation</span>
+          <span class="tag">Transformer-based CV</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -809,7 +938,7 @@
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-header">
-    <span class="section-num">03</span>
+    <span class="section-num">05</span>
     <h2>Experience</h2>
     <div class="section-line"></div>
   </div>
@@ -869,7 +998,7 @@
 <section id="projects">
   <div class="projects-inner">
     <div class="section-header">
-      <span class="section-num">04</span>
+      <span class="section-num">06</span>
       <h2>Projects</h2>
       <div class="section-line"></div>
     </div>
@@ -882,7 +1011,7 @@
         <div class="project-desc">
           Implemented a YOLO-based object detection pipeline for real-time inference.
           Integrated geometric modelling and camera calibration for accurate distance estimation.
-          Evaluated inference latency and measured precision, recall, and mAP metrics.
+          Achieved <span class="project-metric">~25 FPS</span> on CPU, evaluated at <span class="project-metric">mAP@0.5 of ~76%</span>, with latency benchmarked across varying input resolutions.
         </div>
         <div class="project-stack">
           <span class="tag accent">C++</span>
@@ -899,8 +1028,7 @@
         <div class="project-name">AHB-to-APB Bridge Design</div>
         <div class="project-desc">
           Designed and verified an AMBA-compliant AHB-to-APB bridge with proper clock domain
-          synchronization. Validated protocol timing and data transfer reliability across
-          bus interfaces in an SoC context.
+          synchronization. Validated protocol timing and data transfer reliability across bus interfaces — covering <span class="project-metric">read, write, and idle transfer</span> scenarios in an SoC context.
         </div>
         <div class="project-stack">
           <span class="tag accent">Verilog</span>
@@ -915,10 +1043,7 @@
         <div class="project-icon">Computer Vision · Safety AI</div>
         <div class="project-name">SmartSite Hazard Safety Detection System</div>
         <div class="project-desc">
-          Building a real-time CV pipeline to detect safety violations on construction sites —
-          identifying missing PPE (helmets, vests), restricted zone intrusions, and unsafe
-          proximity events. Leverages YOLOv8 with a custom-trained dataset and alert triggering
-          for live monitoring deployments.
+          Real-time CV pipeline detecting <span class="project-metric">4 violation classes</span> — missing PPE (helmets, vests), restricted zone intrusions, and unsafe proximity events. Custom YOLOv8 model trained on <span class="project-metric">~800 annotated images</span> via Roboflow with alert triggering for live monitoring deployments.
         </div>
         <div class="project-stack">
           <span class="tag accent">Python</span>
@@ -939,7 +1064,7 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-header" style="justify-content: center; text-align: center; flex-direction: column; gap: 0.5rem;">
-    <span class="section-num">05</span>
+    <span class="section-num">07</span>
     <h2 class="contact-title">Let's build something.</h2>
   </div>
   <p class="contact-sub">
